@@ -1,0 +1,62 @@
+
+.app{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.header{
+    grid-area: 1 / 1 / span 1 / span 1;
+
+  .menu{
+      .menu_item{
+          
+      }
+  }  
+}
+
+.main{
+    grid-area: 2 / 1 / span 1 / span 1;
+
+    .instructions{
+
+    }
+
+    .boxes{
+        margin-bottom: 1rem;
+        width: 85%;
+
+        display: flex;
+        justify-content: space-between;
+        display: none;
+
+        .box_item{
+
+        }
+    }
+
+    .objects{
+
+        margin-bottom: 1rem;
+        width: 90%;
+        min-height: 150px;
+        
+        display: flex;
+        justify-content: space-between;
+        .object_item{
+
+        }
+    }
+
+    .time_count{
+        margin: 0 auto;
+        width: 90%;
+
+    }
+
+    .messages{
+
+    }
+
+    .popup{
+    }
+}

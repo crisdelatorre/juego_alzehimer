@@ -1,0 +1,148 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+
+    .menu {
+        .main_menu {
+            @include menu_list;
+            border-bottom: solid 2px black;
+
+            .menu_item {
+                border-right: solid 2px black;
+                padding: 1rem;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions {
+    font-size: 1.8rem;
+    margin: 1rem auto;
+
+}
+
+
+.box_item {
+
+    height: 30vh;
+    width: 13vw;
+
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border: solid 1px black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+    padding: 0.5rem;
+    font-weight: bold;
+
+    .box_id{
+        display: none;
+    }
+
+    &.drop_activate {
+        &:hover {
+            border: 2px solid black;
+        }
+    }
+
+    &.drag_enter{
+        border: 5px solid #551AD4;
+        background: linear-gradient(0deg, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+
+    }
+
+    &.drop_ok {
+        border: 5px solid #17D28F;
+        background: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+    }
+
+    &.drop_error {
+        border: 5px solid #E0193D;
+        background: linear-gradient(0deg, #ff758c 0%, #ff7eb3 100%);
+    }
+}
+
+
+.object_item {
+    max-height: 150px;
+    max-width: 150px;
+
+    // border: 1px solid tomato;
+    touch-action: none;
+    user-select: none;
+
+    img {
+        @include image_contain;
+        max-width: 200px;
+
+    }
+
+    .clth_id{
+        display: none;
+    }
+}
+
+
+
+.countdown {
+
+    .time_count {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 1rem auto;
+
+
+        .time_left {
+            color: #914DA9;
+            font-size: 1.3rem;
+            margin: .5rem 0;
+        }
+
+        .time_bar {
+
+            width: 70rem;
+            height: 5rem;
+            border-radius: 50px;
+            background: white;
+            border: 10px solid #914DA9;
+
+            display: flex;
+            align-items: center;
+
+            .time_passed {
+                background: #914DA9;
+                height: 2.7rem;
+                width: 100%;
+                border-radius: 50px;
+                margin: 2rem 1%;
+
+            }
+        }
+    }
+
+}
+
+.messages {}
+
+.popup {
+    display: none;
+}
